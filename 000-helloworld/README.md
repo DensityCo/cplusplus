@@ -30,6 +30,12 @@ gdb ./helloworld
 lldb ./helloworld
 ```
 
+# Inspect Return Code
+```bash
+./helloworld
+echo $?
+```
+
 # Reference
 * [C Bit-wise Arithmetic](https://en.wikipedia.org/wiki/Bitwise_operations_in_C)
 * [GDB & LLDB Cheatsheet](https://lldb.llvm.org/lldb-gdb.html)
