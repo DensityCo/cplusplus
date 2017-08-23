@@ -3,51 +3,32 @@
 sudo apt-get install build-essential cmake
 ```
 
-```python
-
-int main(int argc, char **argv)
-{
-}
-
+# Environment Setup OSX
+```bash
+1. Install HomeBrew
+2. Install XCode & XCode Commandline
+3. brew update && brew upgrade
+4. brew install cmake
 ```
 
-gcc helloworld.cpp
-
-./a.out
-
-echo $?
-
---
-
-then do iostream, std::cout
-
-
-g++
-
-..
-
-now -o flag
-
-----
-types
-static_cast
-
-show warnings, -WALL, -Werror
- g++ helloworld.cpp -std=c++14 -o helloworld -Wall -Werror
-
----
-
-bit arithmetic
-
-----
-
-cmake
+# Build it
+```bash
+mkdir build
+cd build
 cmake .. -DCMAKE_BUILD_TYPE=DEBUG
 make VERBOSE=1
----
+./helloworld
+```
 
-run file on helloworld
+# Debug on Linux
+```bash
+gdb ./helloworld
+```
 
-gdb
-flags
----
+# Debug on OSX
+```bash
+lldb ./helloworld
+```
+
+# Reference
+
