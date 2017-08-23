@@ -6,7 +6,7 @@ The purpose of this project is to provide real world examples of native C++ deve
   * C/C++ Helloworld
   * Intro to gcc commandline
   * Intro to fixed types
-  * Exposure to <iostream>
+  * Exposure to \<iostream\>
   * Exposure to bit arithmetic
   * Exposure to gdb
   * Intro to CMake
