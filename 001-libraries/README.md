@@ -1,6 +1,15 @@
 # Environment Setup Ubuntu 17.04
 ```bash
-sudo apt-get install build-essential cmake libopencv-dev qtcreator
+sudo apt-get remove libopencv-dev
+sudo apt-get install build-essential cmake qtcreator
+pushd /tmp
+git clone https://github.com/opencv/opencv.git
+cd opencv
+mkdir build
+cd build
+cmake ..
+make -j8
+sudo make install
 ```
 
 # Environment Setup OSX
