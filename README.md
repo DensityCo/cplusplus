@@ -10,5 +10,6 @@ The purpose of this project is to provide real world examples of native C++ deve
   * Exposure to bit arithmetic
   * Exposure to gdb
   * Intro to CMake
+* <b>Session 0x0001</b> - August 29th 2017 - Libraries
 
 
