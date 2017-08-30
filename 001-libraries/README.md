@@ -31,7 +31,15 @@ lldb ./opencv
 
 # QtCreator
 1. Open QtCreator
-2. 
+2. File-> Open CMakeLists.txt
+3. Choose toolkit
+4. Set target to Debug (Left-hand panel icons)
+5. Build
+6. Set Breakpoints in main.cpp
+7. Run Debugger
+
+# Linker
+![staticlink](densitycpp-compilers-linkers-static.png)
 
 # References
 * [Qt Creator|https://www.qt.io/ide/]
