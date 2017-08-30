@@ -17,10 +17,16 @@ set(CMAKE_CXX_FLAGS_RELEASE "-O3 -std=c++11")
 set(CMAKE_CXX_FLAGS_DEBUG   "-O0 -ggdb -g3 -std=c++11")
 set(CMAKE_C_FLAGS_RELEASE   "-O3 -std=c11")
 set(CMAKE_C_FLAGS_DEBUG     "-O0 -ggdb -g3 -std=c11")
+include_directories("/usr/local/include/opencv2")
+link_directories("/usr/local/lib")
 endif(APPLE)
 
 add_executable(opencv opencv.cpp )
 
+if(APPLE)
 target_link_libraries(opencv libopencv_imgproc.dylib libopencv_video.dylib libopencv_videoio.dylib libopencv_text.dylib libopencv_core.dylib libopencv_highgui.dylib)
+else(APPLE)
+target_link_libraries(opencv opencv_imgproc opencv_video opencv_videoio opencv_imgproc opencv_features2d opencv_highgui opencv_core)
+endif(APPLE)
 install(TARGETS opencv DESTINATION bin)
 
