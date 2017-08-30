@@ -1,12 +1,13 @@
 # Environment Setup Ubuntu 17.04
 ```bash
-sudo apt-get install build-essential cmake libopencv-dev
+sudo apt-get install build-essential cmake libopencv-dev qtcreator
 ```
 
 # Environment Setup OSX
 ```bash
-3. brew update && brew upgrade
-4. brew install cmake opencv
+1. brew update && brew upgrade
+2. brew install cmake opencv
+3. Download and install Qt Creator https://download.qt.io/official_releases/qtcreator/4.3/4.3.1/qt-creator-opensource-mac-x86_64-4.3.1.dmg
 ```
 
 # Build it
@@ -27,4 +28,11 @@ gdb ./opencv
 ```bash
 lldb ./opencv
 ```
+
+# QtCreator
+1. Open QtCreator
+2. 
+
+# References
+* [Qt Creator|https://www.qt.io/ide/]
 
