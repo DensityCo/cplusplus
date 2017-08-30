@@ -39,7 +39,13 @@ lldb ./opencv
 7. Run Debugger
 
 # Linker
+## Static
 ![staticlink](densitycpp-compilers-linkers-static.png)
+
+## Dynamic
+![dynamiclink](densitycpp-compilers-linkers-dynamic.png)
+
+
 
 # References
 * [Qt Creator|https://www.qt.io/ide/]
