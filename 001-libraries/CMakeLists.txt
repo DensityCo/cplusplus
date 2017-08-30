@@ -23,10 +23,6 @@ endif(APPLE)
 
 add_executable(opencv opencv.cpp )
 
-if(APPLE)
-target_link_libraries(opencv libopencv_imgproc.dylib libopencv_video.dylib libopencv_videoio.dylib libopencv_text.dylib libopencv_core.dylib libopencv_highgui.dylib)
-else(APPLE)
 target_link_libraries(opencv opencv_imgproc opencv_video opencv_videoio opencv_imgproc opencv_highgui opencv_core)
-endif(APPLE)
 install(TARGETS opencv DESTINATION bin)
 
