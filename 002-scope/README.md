@@ -112,7 +112,7 @@ references should be used instead.
 [8]: src/scope_example.cc
 [9]: src/block_scope_example.cc
 [10]: http://git.denx.de/?p=u-boot.git;a=blob;f=drivers/usb/gadget/f_mass_storage.c;h=1ecb92ac6b81ed3db82a08b6e1a7d554003c0aec;hb=HEAD#l2588
-[11]: img/stack.gif
+[11]: assets/stack.gif
 [12]: src/c_heap_example.c
 [13]: src/cc_heap_example.cc
 [14]: src/raw_pointer_example.cc
