@@ -22,7 +22,7 @@ int main()
     end = chrono::high_resolution_clock::now();
     time_taken = end -start;
 
-    cout << "The answer to problem #1 is " << answer << " Time taken was " << time_taken.count() << " seconds." << endl;
+    cout << "The answer to problem #2 is " << answer << " Time taken was " << time_taken.count() << " seconds." << endl;
 
     return 0;
 }

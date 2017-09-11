@@ -9,27 +9,19 @@ sudo apt-get install build-essential cmake
 2. brew install cmake
 ```
 
+# Go to project Euler and sign up
+```bash
+Go to https://projecteuler.net/about
+Click the Register button to get a project Euler account and track your progress solving problems.
+```
+
+
 # Build it
 ```bash
-mkdir build
-cd build
-cmake .. -DCMAKE_BUILD_TYPE=DEBUG
-make VERBOSE=1
-./helloworld
-```
-
-# Debug on Linux
-```bash
-gdb ./helloworld
-```
-
-# Debug on OSX
-```bash
-lldb ./helloworld
-```
-
-# Inspect Return Code
-```bash
-./helloworld
-echo $?
+clone https://github.com/DensityCo/cplusplus.git
+change to the 003-projectEuler directory
+View main.cpp to see the source.
+cmake .
+make
+./ProjectEuler
 ```
