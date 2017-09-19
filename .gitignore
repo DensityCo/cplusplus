@@ -1,1 +1,3 @@
 build*
+build-*
+*.txt.user
