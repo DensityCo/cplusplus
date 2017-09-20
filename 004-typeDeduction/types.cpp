@@ -27,25 +27,14 @@ int foo(int x, int y)
     return x + 3*y;
 }
 
-int global = 5;
-// auto bar() -> int& // C++11
-int& bar()
-{
-    return global;
-}
-
 void test_auto_assignment()
 {
     std::cout << "\n==test auto assignment==\n";
+
     int a = foo(1,2);
     std::cout << "type(a)=" << type_name<decltype(a)>() << std::endl;
     
-    float b = foo(1,2);
-    b += 0.2;
-    std::cout << "type(b)=" << type_name<decltype(b)>() << std::endl;
-
     auto c = foo(1,2);
-    c += 0.2;
     std::cout << "type(c)=" << type_name<decltype(c)>() << std::endl;
 }
 
@@ -68,6 +57,14 @@ void test_auto_iterators()
     }
     std::cout << std::endl;
 }
+
+int global = 5;
+// auto bar() -> int& // C++11
+int& bar()
+{
+    return global;
+}
+
 
 void test_decltype_vs_auto()
 {
@@ -127,21 +124,17 @@ auto execute(F func, const V& value) -> decltype(func(value)) // C++11
 void test_decltype_template()
 {
     std::cout << "\n==test decltype template==\n";
-    std::cout << execute(getLengthOne, "hello decltype") << std::endl;
-    std::cout << execute(getName, 0) << std::endl;
-
-//    std::vector< decltype(execute(getName, 1)) > v{execute(getName, 1), execute(getName, 0), execute(getName, 3)};
-//    for (auto item : v){
-//        std::cout << "item=" << item << std::endl;
-//    }
+    std::cout << "getLengthOne('helloworld')="<< execute(getLengthOne, "helloworld") << std::endl;
+    std::cout << "getName(0)=" << execute(getName, 0) << std::endl;
+    std::cout << "getLengthOne(getName(3))=" << execute(getLengthOne, execute(getName, 3)) << std::endl;
 }
 
 int main(int argc, char** argv)
 {
     std::cout << "Type deduction and definition examples" << std::endl;
-//    test_auto_assignment();
-//    test_auto_iterators();
-//    test_decltype_vs_auto();
+    test_auto_assignment();
+    test_auto_iterators();
+    test_decltype_vs_auto();
     test_decltype_template();
 
     return 0;
