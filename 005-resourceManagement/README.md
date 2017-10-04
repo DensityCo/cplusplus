@@ -2,6 +2,8 @@
 Goal is to demonstrate how resources are managed in C++14.
 
 # Discussion Points
+* C++ requires manual resource management
+    * Why don't I need to de-allocate a string?
 * Demonstrate the problem we are trying to solve.
 * How do python and java solve this problem.
     * Note that resource management issues exist in all languages.
@@ -9,9 +11,12 @@ Goal is to demonstrate how resources are managed in C++14.
     * namespace
     * object
     * local
+* C++ provides pointer, object and reference, constructors, destructors.
+* stl provides smart pointers.
 * Deterministic resource management
     * Resource management is a "class invariant"
 * Pass-by-value vs. pass-by-reference
+    * Copy and move constructors
 * Memory is NOT the only resource that needs to be managed.
     * Mutexes
     * OS resources
