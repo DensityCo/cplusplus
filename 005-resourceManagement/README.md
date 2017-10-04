@@ -19,6 +19,8 @@ Goal is to demonstrate how resources are managed in C++14.
 * Compare with Python "with" statement
 * Why finally is not necessary
 * Order of deletion
+* Rule of 3/5.
+    * https://en.wikipedia.org/wiki/Rule_of_three_(C%2B%2B_programming)
 
 ## References vs. Smart Pointers vs. Raw Pointers
 * Discuss Object Ownership
