@@ -6,14 +6,18 @@ Goal is to demonstrate how resources are managed in C++14.
 * How do python and java solve this problem.
     * Note that resource management issues exist in all languages.
 * Scope
+    * namespace
+    * object
+    * local
 * Deterministic resource management
+    * Resource management is a "class invariant"
 * Pass-by-value vs. pass-by-reference
 * Memory is NOT the only resource that needs to be managed.
     * Mutexes
     * OS resources
     * Database connections
 * Compare with Python "with" statement
-* Why no finally is necessary
+* Why finally is not necessary
 * Order of deletion
 
 ## References vs. Smart Pointers vs. Raw Pointers
