@@ -177,15 +177,35 @@ void test_array()
 // }
 
 
+// bool longer_string(std::string item1, std::string item2)
+// {
+//     return item1.length() < item2.length();
+// }
+
 // void test_algorithm()
 // {
 //     std::cout << "std::algorithm examples" << std::endl;
 
 //     std::vector<int> foo = {1, 2, 2, 4, 7, 4, 3};
-
+    
 //     std::cout << *max_element(foo.begin(), foo.end()) << std::endl;
 //     std::cout << count(foo.begin(), foo.end(), 4) << std::endl;
 
+//     std::vector<std::string> bar = {"asdf", "jkl", "pqrst", "xyz", "lmnop"};
+    
+//     // Sort strings with default (alphabetical) comparison function
+//     stable_sort(bar.begin(), bar.end());
+//     for (auto& it : bar) {
+//         std::cout << it << " ";
+//     }
+
+//     // Sort strings by string length
+//     stable_sort(bar.begin(), bar.end(), longer_string);
+//     for (auto& it : bar) {
+//         std::cout << it << " ";
+//     }
+
+//     std::cout << std::endl;
 // }
 
 
