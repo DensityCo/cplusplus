@@ -208,6 +208,7 @@ void test_algorithm()
     for (auto& it : bar) {
         std::cout << it << " ";
     }
+    std::cout << std::endl;
 
     std::cout << std::endl;
 }

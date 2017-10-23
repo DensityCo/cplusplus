@@ -32,6 +32,11 @@ The purpose of this project is to provide real world examples of native C++ deve
   * deckltype(auto)
 * <b>Session 0x005</b> - 04 Oct 2017  - RAII - Memory Management V2
 * <b>Session 0x006</b> - 18 Oct 2017 - Standard Template Library Containers - Gus Cost
+  * Sequence containers - `std::array`, `std::vector`, `std::deque`, `std::list`
+  * Associative containers - `std::map`, `std::set` with ordered/unordered variants
+  * Mention of container adaptors - `std::stack`, `std::queue`
+  * Modern initialization and iteration with container literals and the `for :` syntax
+  * Using containers with the `algorithm` library
 * <b>Session 0x007</b> - 25 Oct 2017 - RValue References - Diane deGraft-Johnson 
 * <b>Session 0x008</b> - 25 Oct 2017 - Exception Handling - Craig Fisher
 
