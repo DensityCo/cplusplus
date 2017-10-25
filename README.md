@@ -38,7 +38,7 @@ The purpose of this project is to provide real world examples of native C++ deve
   * Modern initialization and iteration with container literals and the `for :` syntax
   * Using containers with the `algorithm` library
 * <b>Session 0x007</b> - 25 Oct 2017 - RValue References - Diane deGraft-Johnson 
-* <b>Session 0x008</b> - 25 Oct 2017 - Exception Handling - Craig Fisher
+* <b>Session 0x008</b> - 1 Nov 2017 - Exception Handling - Craig Fisher
 
 
 ## Future Topics
