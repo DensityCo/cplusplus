@@ -18,3 +18,5 @@ Can think of floating points as a scientific notation.  Following this compariso
 
 ### Fixed points
 Uses hardware operations controlled by software design.  The hardware is less costly than floating points and can be used to perform basic integer computations as well.  Furthermore, fixed point number representation is useful if the architecture does not support Floating Point Units (FPUs) or can be utilized for improved performance and accuracy; if system does not have a powerful enough processor to handle the precision of floating point mathematics.
+
+Software design may opt to use this type of number representation for its inherent increased code portability.  For example, when storing and executing an operation using fixed points, the processor will store a value and then `scale` location, which multiplies the value or integer by the scale and then determines how the result is displayed.  However, unlike floating point arithmetic, this scale is the same for all values of the same type and does not change during the entire computation.
