@@ -19,4 +19,11 @@ Can think of floating points as a scientific notation.  Following this compariso
 ### Fixed points
 Uses hardware operations controlled by software design.  The hardware is less costly than floating points and can be used to perform basic integer computations as well.  Furthermore, fixed point number representation is useful if the architecture does not support Floating Point Units (FPUs) or can be utilized for improved performance and accuracy; if system does not have a powerful enough processor to handle the precision of floating point mathematics.
 
-Software design may opt to use this type of number representation for its inherent increased code portability.  For example, when storing and executing an operation using fixed points, the processor will store a value and then `scale` location, which multiplies the value or integer by the scale and then determines how the result is displayed.  However, unlike floating point arithmetic, this scale is the same for all values of the same type and does not change during the entire computation.
+When storing and executing an operation using fixed points, the processor will store a value and then its `scale` location, which multiplies the value or integer by this scale, followed by displaying the result.  However, unlike floating point arithmetic, this scale is the same for all values of the same type and does not change during the entire computation.  And the maximum/minimum value is the capacity at which the displayed integer data type, after multiplying the scale, can contain.
+
+You can perform the basic arithmetic operations such as addition, subtraction, multiplication, division, etc. as long as no overflow occurs and as long as the numbers have the same fixed point type (e.g. integer data type) and scaling factor.  If the latter is not true, then one of the numbers must be converted to the other.  If rounding is executed, some of the information could be loss as in floating points.
+
+#### What method is best
+In general, if needed fixed point can be implemented in the C++ language and is supported with GCC.  However, floating point representations might be more helpful because of its ability to handle a wider dynamic (@run time) range and there are no requirements for programmers to define (@compile time) fixed integer value - how many digits to store after the decimal.  
+
+A common practice for using fixed point numbers is for storing monetary data as well as most relational databases.
