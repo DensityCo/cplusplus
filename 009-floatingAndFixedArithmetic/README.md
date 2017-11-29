@@ -3,7 +3,8 @@
 ### Integers
 A finite block of linear data and its size or width is platform dependent.  These number representations have some minimum and maximum possible values and depending on the processor, the size of the integer may vary.  Are there limitations with how most systems store integer data types in memory?  Such as with Booleans, although a single bit represents one of two values, usually a full byte is given for convenience and speed of access.  Why is this important?  There might become a possible non-portability issue if the implementation assumes that all computers, on which software will run, have the same word size (an integer data type).  
 
-For example, 
+For example,
+
        ` int variable ` // will fail on systems with 16b integers if the variable is attempting to hold values > 2 to the 15th - 1
        ` long variable ` // instead declare a long having at least 32b
         
