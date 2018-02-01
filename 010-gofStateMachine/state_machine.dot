@@ -1,0 +1,23 @@
+digraph lockbox_statemachine {
+
+    rankdir=LR;
+
+    node [shape = point]; start;
+    node [shape = circle] No_Robot;
+    node [shape = circle] Password;
+    node [shape = circle] Repeat_Chars;
+    node [shape = circle] Display_Secret;
+
+    start -> No_Robot;
+    
+    No_Robot -> Password [label = "Keyboard Input: 'Confirmation Success'"];
+    No_Robot -> No_Robot [label = "Keyboard Input: 'Confirmation Failed'"];
+    No_Robot -> Display_Secret [label = "Backdoor Signal"];
+
+    Password -> Repeat_Chars [label = "Keyboard Input: 'Password Correct'"];
+    Password -> Display_Secret [label = "Backdoor Signal"];
+    Password -> No_Robot [label = "Watchdog Timeout"];
+    Password -> Password [label = "Keyboard Input: 'Wrong Password'"];
+
+    Display_Secret -> No_Robot [label = "Keyboard Input"];
+}
