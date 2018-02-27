@@ -40,6 +40,7 @@ The purpose of this project is to provide real world examples of native C++ deve
 * <b>Session 0x007</b> - 25 Oct 2017 - RValue References - Diane deGraft-Johnson 
 * <b>Session 0x008</b> - 1 Nov 2017 - Exception Handling - Craig Fisher
 * <b>Session 0x009</b> - 29 Nov 2017 - Floating and Fixed Arithmetic - Diane deGraft-Johnson
+* <b>Session 0x011</b> - 28 Fev 2017 - Templates: functions and classes (basics) - Victoria Rudakova
 
 
 ## Future Topics
