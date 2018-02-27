@@ -13,7 +13,6 @@ A *function template*, aka *generic function*: a blueprint to generate a potenti
 * Parameter type deduction: value parameters, lvalue-reference parameters.
 * Errata.
 * Mixing types.
-* Automatic return types.
 
 ## Class templates
 
