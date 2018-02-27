@@ -23,7 +23,7 @@
 template <typename T>
 auto max(T a, T b) // auto - since c++14
 {
-    // function template replaces the non-tempate overloads and
+    // function template replaces the non-template overloads and
     // we keep the name "max"
     std::cout << "custom type\n";
     if (a>b)
@@ -108,9 +108,13 @@ int main()
     // Errata: what happens when the provided template type does not provide operator> ?
     std::complex<float> z(3, 2), c(4, 8);
 //    std::cout << "max-complex(c,z)=" << ::max(c, z) << std::endl; // error: no match for operator>
+
+    // Concept - a set of type requirements
+    // It is important to know which argument types are acceptable. And what operators those classes
+    // should have available (e.g., operator> for max()).
     
     // Instantiation.
-    // When compiler processes a generic funtion's definition, it can only detect errors that are
+    // When compiler processes a generic function's definition, it can only detect errors that are
     // independent of the template parameters like parsing errors. 
     isPairPositive(std::make_pair<int, char>(3, 'a'));
     // we can't call isPairPositive with any intrinsic type like int or double, but the template function
@@ -118,14 +122,14 @@ int main()
     //
     // Compilation of function template: does not generate any code in the binary. This inly happens when
     // we call it. In this case, we instantiate this function template. Only then the compiler performs
-    // a complete check of whether the genericfunction is correct for the given argument type(s).
+    // a complete check of whether the generic function is correct for the given argument type(s).
     // Example: max() can be instantiated with int or double
     // isPairPosotive() cab be instantiated with std::pair<T1, T2>
 
     // From above examples: the template parameter is deduced from the arguments. 
     // To be more explicit, we can declare the type that substitutes the template parameters:
     std::cout << "max-uint(3, 5)=" << max<unsigned int>(3, 5) << std::endl;
-    // implicit instatiation works in most cases as expected. The explicit nomintation
+    // implicit instantiation works in most cases as expected. The explicit nomination
     // is mostly needed for disambiguation and special usages (e.g. std::forward).
 
 
@@ -154,7 +158,7 @@ int main()
     // LValue reference parameters. Example: bar();
     // TInput is again the argument type with all qualifiers stripped off.
     // Thus, arg is a const reference of the unqualified arguments type so we cannot modify arg.
-    bar(0); // valid as exception for programmer's convinience
+    bar(0); // valid as exception for programmer's convenience
     bar(i);
     bar(j);
     bar(k);
@@ -167,7 +171,7 @@ int main()
     // Temporaries are refused because there exist no type for TInput such that TInput& becomes int&&.
     // const int& can be matched with TInput&, the TInput is substituted with const int. Therefore,
     // TInput& = const int&.
-    // Thus, the argumnent pattern TInput& does not limit arguments to mutable references, unless arg is
+    // Thus, the argument pattern TInput& does not limit arguments to mutable references, unless arg is
     // modified.
 
     // Mixing types
@@ -176,7 +180,7 @@ int main()
     unsigned int ui=3;
 //    std::cout << "max-uint-int(2,3)=" << ::max(ii, ui) << std::endl;
     std::cout << "max-uint-int(2,3)=" << ::max<unsigned int>(ui, ii) << std::endl;
-    // when no exact match found - template arguments are not implicitely converted as it would happen
+    // when no exact match found - template arguments are not implicitly converted as it would happen
     // with the non-template arguments. 
     //
     // Performance.
@@ -186,7 +190,7 @@ int main()
 
 
     // Class templates.
-    // The types of data memebers can be parameterized. 
+    // The types of data members can be parameterized. 
     // Example: class vector
     // Template class is similar to non-template class. There is one extra parameter T for the elements type.
     // Member variables like m_size and corresponding functions getSize are not affected by that T parameter.
